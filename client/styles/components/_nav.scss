@@ -38,17 +38,33 @@
   justify-content: center;
   height: 100%;
 
+  // @include media-breakpoint-down($sm) {
+  //   padding: 0 #{5 / $base-font-size}rem;
+  // };
+
   & button {
     padding: #{12 / $base-font-size}rem #{10 / $base-font-size}rem;
+
+    @include media-breakpoint-down($sm) {
+      padding: 0 #{5 / $base-font-size}rem;
+    };
   }
 }
 
 .nav__item:first-child {
   padding-left: #{15 / $base-font-size}rem;
+
+  @include media-breakpoint-down($sm) {
+    padding: 0 #{5 / $base-font-size}rem;
+  };
 }
 
 .nav__item:last-child {
   padding-right: #{15 / $base-font-size}rem;
+
+  @include media-breakpoint-down($sm) {
+    padding: 0 #{5 / $base-font-size}rem;
+  };
 }
 
 .nav__item-header {
@@ -97,6 +113,10 @@
 
 .nav__items-right {
   padding-right: #{20 / $base-font-size}rem;
+
+  @include media-breakpoint-down($sm) {
+    padding: 0 #{5 / $base-font-size}rem;
+  };
 
   & .nav__dropdown {
     width: #{121 / $base-font-size}rem;
@@ -234,6 +254,11 @@ button {
   position: relative;
   height: #{42 / $base-font-size}rem;
   width: #{56 / $base-font-size}rem;
+
+  @include media-breakpoint-down(576) {
+    height: #{42 / $base-font-size}rem;
+    width: #{75 / $base-font-size}rem;
+  }
 
   & span {
     position: absolute;
